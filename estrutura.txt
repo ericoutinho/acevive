@@ -1,0 +1,35 @@
+
+
+header
+    nav
+    slider
+        consultoria
+        investimento
+        suporte
+        confiança
+
+content
+    quem somos
+        A ACEVIVE - Associação Capixaba das Empresas de Vistoria de Veículos surgiu da necessidade de suprir as demandas das empresas do setor.
+        Objetivamos oferecer assessoria completa a todos os nossos associados de forma simples, eficaz e acessível.
+
+    serviços
+        consultoria
+        treinamentos
+        suporte
+
+    timeline
+
+    nosso time
+        diretores
+
+    Testemunhos ?
+    Associados ?
+
+    contato
+        informações de contato
+        mapa Google
+
+footer
+
+AVENIDA NOSSA SENHORA DA PENHA, 2796, SALA 804, SALA 805, SALA 806, SALA 807, SALA 808, SANTA LUÍZA, VITORIA - ES

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat:400,400i,700');
+
+:root{
+    --font-Titulo: 'Lato', sans-serif;
+    --font-Texto: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-Texto);
+    font-weight: 400;
+    color: #2e3131;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
+section.section{
+    /* height: 100vh;
+    max-height: 740px; */
+    padding: 45px 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+section.section h2{
+    text-align: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+/* INICIO */
+.carousel-caption h5{
+    font-family: "Lato", sans-serif;
+    font-size: 3em;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    color: #FED141;
+}
+
+.carousel-caption p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* QUEM SOMOS */
+
+#quem_somos{
+    background-color: #0B6E4F;
+    color: #fff;
+}
+
+/* SERVIÇOS */
+
+#servicos{
+    /* background-color: #08A045; */
+    background-color: #91b496;
+}
+
+.card-servicos{
+    transition: all 0.2s linear;
+}
+
+.card-servicos:hover{
+    transform: scale(1.05);
+}
+
+.card-title{
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+}
+
+/* PARCEIROS */
+
+#parceiros{
+    background-color: #ecf0f1;
+}
+
+/* CONTATO */
+
+#contato{
+    background-color: #bdc3c7;
+}
+
+ul.info-contact{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.info-contact li{
+    display: block;
+    margin-bottom: 20px;
+}
+
+span.contact-label{
+    font-weight: 700;
+}
+
+/* MAPA */
+
+#mapa{
+    overflow:hidden;
+    /* padding-bottom:56.25%; */
+    padding-bottom: 25%;
+    position:relative;
+    height:0;
+}
+
+#mapa iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #073B3A;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer ul.social-media{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul.social-media li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer ul.social-media li a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
