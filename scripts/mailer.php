@@ -1,75 +1,56 @@
 <?php
 
-        //require "PHPMailer/PHPMailer.php";
-        //require "PHPMailer/SMTP.php";
+        require("PHPMailer/Exception.php");
+        require("PHPMailer/OAuth.php");
+        require("PHPMailer/PHPMailer.php");
+        require("PHPMailer/SMTP.php");
 
-        $email_envio    = "website@acevive.com";
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+        use PHPMailer\PHPMailer\SMTP;
+        use PHPMailer\PHPMailer\OAuth;
 
-        if (isset($_POST['btn-submit'])) {
+        if (isset($_POST)){
 
-            $nome       = filter_input(INPUT_POST, "nome");
-            $email      = filter_input(INPUT_POST, "email");
-            $telefone   = filter_input(INPUT_POST, "telefone");
-            $mensagem   = filter_input(INPUT_POST, "mensagem");
-            $agora      = date("d/m/Y h:i:s");
+            $nome       = strtoupper(filter_input(INPUT_POST, 'nome'));
+            $email      = filter_input(INPUT_POST, 'email');
+            $telefone   = filter_input(INPUT_POST, 'telefone');
+            $mensagem   = strtoupper(filter_input(INPUT_POST, 'mensagem'));
 
-            // Email para a empresa
-
-            $destino_emp    = "ACEVIVE <contato@acevive.com>";
-            $assunto_emp    = "Mensagem de {$nome} <$email>";
-            $msg_emp        = "<html>
-                                <head>
-                                <title>[acevive.com] Envio automático do site acevive.com</title>
-                                </head>
-                                <body>
-                                    <p>Esta é uma mensagem automatizada enviada pelo site <a href='https://acevive.com' target='_blank'>https://acevive.com</a> em {$agora}.</p>\n
-                                    <hr/>
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Nome:</span> {$nome}<p>\n
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Email:</span> {$email}<p>\n
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Telefone:</span> {$telefone}<p>\n
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Mensagem:</span></br>\n
-                                    {$mensagem}</p>\n
-                                </body>
-                                </html>";
-            $headers_emp     = "MIME-Version: 1.0" . "\r\n";
-            $headers_emp    .= "Content-type:text/html; charset=UTF-8" . "\r\n";
-            $headers_emp    .= "From: {$email_envio}" . "\r\n";
-
-            // Email para o cliente
-            $destino_cli        = "{$nome} <{$email}>";
-            $assunto_cli        = "[acevive.com] Envio automático do site acevive.com";
-            $msg_cli            = "<html>
-                                <head>
-                                <title>[acevive.com] Envio automático do site acevive.com</title>
-                                </head>
-                                <body>
-                                    <p style='font-size=1.2em; font-weight: bold;'>Olá, {$nome},</p>\n
-                                    <p>Esta é uma mensagem automatizada enviada pelo site <a href='https://acevive.com' target='_blank'>https://acevive.com</a>
-                                    em resposta a sua solicitação enviada em {$agora}, conforme a seguir:</p>\n
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Nome:</span> {$nome}<p>\n
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Email:</span> {$email}<p>\n
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Telefone:</span> {$telefone}<p>\n
-                                    <p><span style='display: inline-block; font-weight: bold; width: 120px; margin-right: 10px;'>Mensagem:</span></br>\n
-                                    {$mensagem}</p>\n
-                                    <hr/>
-                                    <p>Em breve retornaremos com resposta à sua solicitação.<br/>\n
-                                    Agradeçemos o seu contato.<br/>\n
-                                    Equipe da ACEVIVE</p>\n
-                                    <p>+55 27 8888.8888<br/>\n
-                                    <a href='mailto:contato@acevive.com'>contato@acevive.com</a></p>
-                                </body>
-                                </html>";
-            $headers_cli     = "MIME-Version: 1.0" . "\r\n";
-            $headers_cli    .= "Content-type:text/html; charset=UTF-8" . "\r\n";
-            $headers_cli    .= "From: acevive <website@acevive.com>" . "\r\n";
+            $assunto        = "[acevive.com] Mensagem de {$nome} <{$email}>";
+            $agora          = date('d/m/Y h:i:s');
+            $mensagem       = "<h3>Mensagem enviada automaticamente do site https://www.acevive.com</h3>\n
+                               <p>De: {$nome} - {$email}<br>\n
+                               <p>Em: {$agora}<br>\n
+                               <p>Telefone: {$telefone}</p>\n
+                               <hr>\n
+                               <p>{$mensagem}</p>\n";
             
-
-            // Envio empresa
-            if ( mail($destino_emp, $assunto_emp, $msg_emp, $headers_emp) ) {
-                mail($destino_cli, $assunto_cli, $msg_cli, $headers_cli);
-                echo "success";
-            } else {
+            $mail = new PHPMailer();
+            
+            $mail->isSMTP();
+            $mail->Host         = 'mail.acevive.com';
+            $mail->SMTPAuth     = true;
+            $mail->SMTPSecure   = 'tls';
+            $mail->Username     = 'website@acevive.com';
+            $mail->Password     = '6n3t112233';
+            $mail->Port         = 587;
+            
+            $mail->setFrom('website@acevive.com', 'Website ACEVIVE');
+            $mail->addAddress('contato@acevive.com', 'ACEVIVE');
+            
+            $mail->isHTML(true);
+            
+            $mail->Subject      = $assunto;
+            $mail->Body         = nl2br($mensagem);
+            $mail->AltBody      = nl2br(strip_tags($mensagem));
+            
+            if(!$mail->send()) {
                 echo "fail";
+            } else {
+                echo "success";
             }
 
+        } else {
+            echo "fail";
         }

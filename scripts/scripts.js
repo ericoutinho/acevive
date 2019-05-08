@@ -48,11 +48,11 @@ function sendForm(){
     //console.warn("Erros: " + errors);
 
     if (errors === 0) {
-        var data = $("#contact-form").serialize();
-        var ajax = $.post("./scripts/mailer.php", data);
+        var info = $("#contact-form").serialize();
+        var ajax = $.post("scripts/mailer.php", info);
         ajax.done(function(data){
-            if(data){
-                console.log("OK");
+            if(data == 'success'){
+                console.log(data);
                 $("#contact-form").hide();
                 $("#status-form").removeClass("d-none");
             } else {
