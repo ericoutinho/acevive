@@ -1,8 +1,11 @@
 <?php
 
-        $email_envio    = "site@acevive.com";
+        //require "PHPMailer/PHPMailer.php";
+        //require "PHPMailer/SMTP.php";
 
-        if (isset($_POST)) {
+        $email_envio    = "website@acevive.com";
+
+        if (isset($_POST['btn-submit'])) {
 
             $nome       = filter_input(INPUT_POST, "nome");
             $email      = filter_input(INPUT_POST, "email");
@@ -12,7 +15,7 @@
 
             // Email para a empresa
 
-            $destino_emp    = "email_da_empresa <email_da_empresa@acevive.com>";
+            $destino_emp    = "ACEVIVE <contato@acevive.com>";
             $assunto_emp    = "Mensagem de {$nome} <$email>";
             $msg_emp        = "<html>
                                 <head>
@@ -28,6 +31,9 @@
                                     {$mensagem}</p>\n
                                 </body>
                                 </html>";
+            $headers_emp     = "MIME-Version: 1.0" . "\r\n";
+            $headers_emp    .= "Content-type:text/html; charset=UTF-8" . "\r\n";
+            $headers_emp    .= "From: {$email_envio}" . "\r\n";
 
             // Email para o cliente
             $destino_cli        = "{$nome} <{$email}>";
@@ -53,16 +59,17 @@
                                     <a href='mailto:contato@acevive.com'>contato@acevive.com</a></p>
                                 </body>
                                 </html>";
-
-            $headers_emp     = "MIME-Version: 1.0" . "\r\n";
-            $headers_emp    .= "Content-type:text/html; charset=UTF-8" . "\r\n";
-            $headers_emp    .= "From: {$email_envio}" . "\r\n";
+            $headers_cli     = "MIME-Version: 1.0" . "\r\n";
+            $headers_cli    .= "Content-type:text/html; charset=UTF-8" . "\r\n";
+            $headers_cli    .= "From: acevive <website@acevive.com>" . "\r\n";
+            
 
             // Envio empresa
             if ( mail($destino_emp, $assunto_emp, $msg_emp, $headers_emp) ) {
-                echo "Enviado com sucesso"; 
+                mail($destino_cli, $assunto_cli, $msg_cli, $headers_cli);
+                echo "success";
             } else {
-                echo "Falhou";
+                echo "fail";
             }
 
         }

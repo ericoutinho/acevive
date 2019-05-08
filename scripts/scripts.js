@@ -49,7 +49,7 @@ function sendForm(){
 
     if (errors === 0) {
         var data = $("#contact-form").serialize();
-        var ajax = $.post("./scripts/contact.php", data);
+        var ajax = $.post("./scripts/mailer.php", data);
         ajax.done(function(data){
             if(data){
                 console.log("OK");
