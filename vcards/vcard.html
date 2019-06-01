@@ -186,10 +186,39 @@
         </div>
     </footer> -->
 
-    <a href="vcard.vcf" class="btn btn-danger rounded-circle text-center shadow d-flex align-items-center justify-content-center" style="position: fixed; right: 10px; top: 70vh; width: 60px; height: 60px;"><i class="fas fa-user-plus fa-lg text-light"></i></a>
+    <a href="vcard.vcf" rel="external" class="btn btn-danger rounded-circle text-center shadow d-flex align-items-center justify-content-center" style="position: fixed; right: 10px; top: 70vh; width: 60px; height: 60px;"><i class="fas fa-user-plus fa-lg text-light"></i></a>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        /*
+         * window.open gets overwritten so we save this before using and reset everytime
+         * */
+         if (!saveWindowOpenFunction)
+            saveWindowOpenFunction = window.open;
+        $('a[rel*=external]').click(function () {
+            //Reset window open because it will be overriden on mobile devices
+            window.open = saveWindowOpenFunction;
+
+            //This has only chrome on iOs
+            //Start the download directly because chrome is preventing window.open
+            if (navigator.userAgent.match('CriOS'))
+                return true;
+
+            var failed = false;
+            try {//Try to open the url it will fail on inapp browsers
+                open = window.open($(this).attr('href'), '_system');
+            }
+            catch (e) {
+                failed = true;
+            }
+
+            if (open == null || failed == true || typeof(open) == 'undefined' || open.location == window.location)
+                alert("Download is not allowed by this scanner app. Please open this page in your default browser e.g. chrome or safari");
+
+            return false;
+        });
+    </script>
 </body>
 </html>
