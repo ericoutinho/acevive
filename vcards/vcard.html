@@ -14,103 +14,169 @@
         body{
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
+            background-color:#6c7a89;;
+        }
+        .name{
+            line-height: 2.5rem;
         }
     </style>
 
 </head>
 <body>
-    <header class="py-3">
-        <div class="container border" style="max-width: 575px;">
+    <header class="pt-4" style="background:#6c7a89;">
+        <div class="container" style="max-width: 575px;background-color:#67809f;">
             <div class="row">
-                <div class="col text-center">
+                <div class="col text-center pt-3">
                     <img src="../assets/team (1).jpg" alt="profile picture" class="rounded-circle image-fluid w-25">
                 </div>
             </div>
             <div class="row">
-                <div class="col text-center py-3">
-                    <h1>Roberto Texeira Carlos</h1>
+                <div class="col text-center py-2">
+                    <h1 class="name">Roberto Texeira Carlos</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col text-center p-3 border">
-                    <a href="tel:+5527999146655" class="link-streched text-reset text-decoration-none">
-                        <i class="fas fa-phone fa-2x"></i>
-                        <div class="w-100"></div>
-                        <small class="text-muted">Call</small>
-                    </a>
-                </div>
-                <div class="col text-center p-3 border">
-                    <a href="mailto:email@host.com" class="link-streched text-reset text-decoration-none">
-                        <i class="fas fa-paper-plane fa-2x"></i>
-                        <div class="w-100"></div>
-                        <small class="text-muted">Send</small>
-                    </a>
+                <div class="col pb-4">
+                    <div class="row">
+                        <div class="col p-3">
+                            <div class="border border-light rounded-circle d-flex align-items-center justify-content-center m-auto" style="width:90px; height:90px;">
+                                <a href="tel:" class="stretched-link text-center text-decoration-none text-reset">
+                                    <i class="fas fa-phone fa-lg text-light"></i>
+                                    <div class="w-100"></div>
+                                    <small class="text-light">Ligar</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col p-3">
+                            <div class="border border-light rounded-circle d-flex align-items-center justify-content-center m-auto" style="width:90px; height:90px;">
+                                <a href="mailto:" class="stretched-link text-center text-decoration-none text-reset">
+                                    <i class="fas fa-paper-plane fa-lg text-light"></i>
+                                    <div class="w-100"></div>
+                                    <small class="text-light">Mensagem</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="contato py-3">
-            <div class="container border" style="max-width: 575px;">
+        <section class="contato">
+            <div class="container pt-3" style="max-width: 575px; background-color:#ecf0f1;">
                 <div class="row">
                     <div class="col">
-                        <h2 class="text-center">Contato</h2>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item p-3">
-                                <i class="fal fa-envelope fa-fw fa-lg mr-3"></i>email@host.com.br
+                            <li class="list-group-item py-3 d-flex bg-transparent">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-envelope fa-fw fa-lg mr-3"></i>
+                                </div>
+                                <div>
+                                    email@host.com.br
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">E-mail</small>
+                                </div>
                             </li>
-                            <li class="list-group-item py-3">
-                                <i class="fal fa-mobile fa-fw fa-lg mr-3"></i>+55 27 99911-2525
+                            <li class="list-group-item py-3 d-flex bg-transparent">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-mobile fa-fw fa-lg mr-3"></i>
+                                </div>
+                                <div>
+                                    +55 27 99911-2525
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">Mobile</small>
+                                </div>
                             </li>
-                            <li class="list-group-item py-3">
-                                <i class="fal fa-phone fa-fw fa-lg mr-3"></i>+55 27 3015-5544
+                            <li class="list-group-item py-3 d-flex bg-transparent">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-phone fa-fw fa-lg mr-3"></i>
+                                </div>
+                                <div>
+                                    +55 27 3014-6595
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">Telefone</small>
+                                </div>
                             </li>
-                            <li class="list-group-item py-3 d-flex">
+                            <li class="list-group-item py-3 d-flex bg-transparent">
                                 <div class="d-flex align-items-center"><i class="far fa-building fa-fw fa-lg mr-3"></i></div>
-                                <div>ACEVIVE - Associação Capixaba das Empresas de Vistoria de Veículos</div>
+                                <div>
+                                    ACEVIVE - Associação Capixaba das Empresas de Vistoria de Veículos
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">Empresa</small>
+                                </div>
                             </li>
-                            <li class="list-group-item py-3"><i class="fal fa-user-tie fa-fw fa-lg mr-3"></i>CEO</li>
-                            <li class="list-group-item py-3"><i class="fal fa-globe fa-fw fa-lg mr-3"></i>www.acevive.com</li>
-                            <li class="list-group-item py-3 d-flex">
-                                <div class="d-flex align-items-center"><i class="fal fa-map-marker-alt fa-fw fa-lg mr-3"></i></div>
-                                <div>Av. Nossa Senhora da Penha, 2760 - sl. 801 a 810, Santa Luíza - Vitória - ES - Brasil -CEP 29150-555</div>
+                            <li class="list-group-item py-3 d-flex bg-transparent">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-user-tie fa-fw fa-lg mr-3"></i>
+                                </div>
+                                <div>
+                                    CEO
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">Cargo</small>
+                                </div>
                             </li>
-                            <li class="list-group-item py-3"><i class="fal fa-address-card fa-fw fa-lg mr-3"></i>bio</li>
+                            <li class="list-group-item py-3 d-flex bg-transparent">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-globe fa-fw fa-lg mr-3"></i>
+                                </div>
+                                <div>
+                                    www.acevive.com
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">Website</small>
+                                </div> 
+                            </li>
+                            <li class="list-group-item py-3 d-flex bg-transparent">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-map-marker-alt fa-fw fa-lg mr-3"></i>
+                                </div>
+                                <div>
+                                    Av. Nossa Senhora da Penha, 2760 - sl. 801 a 810, Santa Luíza - Vitória - ES - Brasil - CEP 29150-555
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">Endereço</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-3 d-flex bg-transparent">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-address-card fa-fw fa-lg mr-3"></i>
+                                </div> 
+                                <div>
+                                    Bio
+                                    <div class="w-10"></div>
+                                    <small class="text-muted">Bio</small>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="social py-3">
-            <div class="container" style="max-width: 575px;">
+        <section class="social py-3 mb-5">
+            <div class="container" style="max-width: 575px; background:#6c7a89;">
                 <div class="row">
                     <div class="col">
-                        <h2 class="text-center">Mídias sociais</h2>
                         <ul class="list-group list-group-horizontal">
-                            <li class="list-group-item flex-fill py-3 text-center">
-                                <i class="fab fa-facebook-square fa-fw fa-2x"></i>
-                                <div class="w-100"></div>
-                                <small class="text-muted">Facebook</small>
-                            </li>
-                            <li class="list-group-item flex-fill py-3 text-center">
-                                <i class="fab fa-instagram fa-fw fa-2x"></i>
+                            <a href="https://www.facebook.com" class="list-group-item flex-fill py-3 text-center text-decoration-none">
+                                    <i class="fab fa-facebook-square fa-fw fa-2x" style="color:#1f3a93;"></i>
+                                    <div class="w-100"></div>
+                                    <small class="text-muted">Facebook</small>
+                            </a>
+                            <a href="https://www.instagram.com" class="list-group-item flex-fill py-3 text-center text-decoration-none">
+                                <i class="fab fa-instagram fa-fw fa-2x" style="color:#f62459;"></i>
                                 <div class="w-10"></div>
                                 <small class="text-muted">Instagram</small>
-                            </li>
-                            <li class="list-group-item flex-fill py-3 text-center">
-                                <a href="twitter.com" class="link-streched">
-                                    <i class="fab fa-twitter fa-fw fa-2x"></i>
-                                    <div class="w-100"></div>
-                                    <small class="text-muted">Twitter</small>
-                                </a>
-                            </li>
+                            </a>
+                            <a href="https://www.twitter.com" class="list-group-item flex-fill py-3 text-center text-decoration-none">
+                                <i class="fab fa-twitter fa-fw fa-2x" style="color:#4d13d1;"></i>
+                                <div class="w-100"></div>
+                                <small class="text-muted">Twitter</small>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="py-4">
+    <!-- <footer class="py-4">
         <div class="container" style="max-width: 575px;">
             <div class="row">
                 <div class="col text-center">
@@ -118,7 +184,9 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
+
+    <a href="vcard.vcf" class="btn btn-danger rounded-circle text-center shadow d-flex align-items-center justify-content-center" style="position: fixed; right: 10px; top: 70vh; width: 60px; height: 60px;"><i class="fas fa-user-plus fa-lg text-light"></i></a>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
