@@ -18,7 +18,7 @@
             <div class="sign-content" style="margin: 0;width: 100%;">
                 <div class="sign-row" style="margin: 0;">
                     <div class="sign-brand" style="margin: 0;display: inline-block;width: 120px;min-height: 200px;text-align: center;">
-                        <img src="assets/logo.svg" style="width: 90%;height: auto;">
+                        <img src="assets/logo-acevive.png" style="width: 90%;height: auto;">
                     </div>
                     <div class="sign-data" style="margin: 0;padding-left: 25px;display: inline-block;vertical-align: top;">
                         <h3 class="name" style="margin: 0;padding: 0;font-family: 'Open Sans', Arial, Tahoma, sans-serif"><?= $data[$s]['first_name'] . ' ' . $data[$s]['last_name'] ?></h3>
