@@ -15,12 +15,12 @@
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap" rel="stylesheet">
         </head>
         <body style="font-family: 'Open Sans', Arial, Tahoma, sans-serif;font-weight: 400;font-size: 15px;color: #2e3131;">
-            <div class="sign-content" style="margin: 0;width: 100%;">
+            <div class="sign-content" style="margin: 0;width: 100%;display:block;">
                 <div class="sign-row" style="margin: 0;">
-                    <div class="sign-brand" style="margin: 0;display: inline-block;width: 120px;min-height: 200px;text-align: center;">
-                        <img src="assets/logo-acevive.png" style="width: 90%;height: auto;">
+                    <div class="sign-brand" style="margin: 0;display: inline-block;max-width:100px;width:25%;min-height: 200px;text-align: center;">
+                        <img src="assets/logo-acevive.png" style="width: 100%;height: auto;">
                     </div>
-                    <div class="sign-data" style="margin: 0;padding-left: 25px;display: inline-block;vertical-align: top;">
+                    <div class="sign-data" style="margin: 0;padding-left: 20px;display: inline-block;vertical-align: top;max-width:70%;">
                         <h3 class="name" style="margin: 0;padding: 0;font-family: 'Open Sans', Arial, Tahoma, sans-serif"><?= $data[$s]['first_name'] . ' ' . $data[$s]['last_name'] ?></h3>
                         <p class="title" style="color:#6c7a89;font-family: 'Open Sans', Arial, Tahoma, sans-serif;margin: 0;padding: 0;font-style: italic;font-size: 0.8em;margin-bottom: 10px;"><?= $data[$s]['title'] ?></p>
                         <p class="tel" style="margin: 0;padding: 0;font-family: 'Open Sans', Arial, Tahoma, sans-serif"><a href="tel:<?= $data[$s]['mobile'] ?>" class="link" style="text-decoration: none;font-weight: 700;color: inherit;"><img class="icon" src="assets/icon-whatsapp.png" style="display: inline-block;height: 20px;width: auto;vertical-align: middle;"> <?= $data[$s]['mobile'] ?></a></p>
