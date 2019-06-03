@@ -28,13 +28,7 @@
             
             $mail = new PHPMailer();
             
-            $mail->isSMTP();
-            $mail->Host         = 'mail.acevive.com';
-            $mail->SMTPAuth     = true;
-            $mail->SMTPSecure   = 'tls';
-            $mail->Username     = 'website@acevive.com';
-            $mail->Password     = '6n3t112233';
-            $mail->Port         = 587;
+            
             
             $mail->setFrom('website@acevive.com', 'Website ACEVIVE');
             $mail->addAddress('contato@acevive.com', 'ACEVIVE');
