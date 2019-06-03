@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assinatura</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Open Sans', Arial, Tahoma, sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            color: #2e3131;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        div{
+            margin: 0;
+            /* border: solid thin #ddd; */
+        }
+    
+        .sign-content{
+            width: 100%;
+        }
+    
+        .sign-brand{
+            display: inline-block;
+            width: 120px;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        .sign-brand img{
+            width: 90%;
+            height: auto;
+        }
+    
+        .sign-data{
+            padding-left: 25px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .sign-data .ms {
+            padding: 10px 0;
+            margin-top: 10px;
+            border-top: solid thin #ddd;
+        }
+
+        .sign-data .icon{
+            display: inline-block;
+            height: 20px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .sign-data .ms .icon-2x{
+            display: inline-block;
+            height: 30px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .sign-data p.title{
+            font-style: italic;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        .sign-data p.tel a{
+            font-weight: 700;
+            color: inherit;
+        }
+
+        .sign-data p.address{
+            font-size: 0.8em;
+            margin-top: 15px;
+        }
+    
+        .sign-data h3, .sign-data p{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sign-content">
+        <div class="sign-row">
+            <div class="sign-brand">
+                <img src="assets/logo.svg">
+            </div>
+            <div class="sign-data">
+                <h3 class="name">Eric Coutinho</h3>
+                <p class="title">Analista de TI</p>
+                <p class="tel"><a href="tel:+55 27 99237-5216" class="link"><img class="icon" src="assets/icon-whatsapp.png" /> +55 27 99237-5216</a></p>
+                <p class="tel"><a href="tel:+55 27 3075-7743" class="link"><img class="icon" src="assets/icon-phone.png" /> +55 27 3075-7743</a></p>
+                <p class="address">Rua Rio de Janeiro, 250, Santa Inês<br/>
+                Vila Velha/ES - CEP: 29.106-241</p>
+
+                <div class="ms">
+                    <a href="https://www.acevive.com" class="link" target="_blank" title="acevive.com"><img src="assets/icon-web.png" class="icon-2x"></a>
+                    <a href="https://instagram.com/acevive.vix" class="link" target="_blank" title="instagram.com"><img src="assets/icon-instagram.png" class="icon-2x"></a>
+                    <a href="https://facebook.com/acevive.vix"  class="link" target="_blank" title="facebook.com"><img src="assets/icon-facebook.png" class="icon-2x"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
